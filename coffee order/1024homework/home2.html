@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile order</title>
+</head>
+
+<body>
+
+    <form action="http://localhost:8888" method="post">
+
+    <h3>모바일 주문 신청</h3>
+    <fieldset>
+        <legend type><b>메뉴표</b></legend><ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>아메리카노</b><span style="float:right;">₩3,000</span></li> 
+            
+        </ul>
+        <ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>카페 라떼</b><span style="float:right;">₩5,000</span></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>카페 모카</b><span style="float:right;">₩5,000</span></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>자스민 티</b><span style="float:right;">₩6,000</span></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>딸기 스무디</b><span style="float:right;">₩7,000</span></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" name="option2" id="option2"> <b>복숭아 아이스티</b><span style="float:right;">₩4,000</span></li>   
+        </ul>
+    </fieldset>
+    
+    
+
+    <p><b>이름과 전화번호를 꼭 기입해주세요 !!</b> <small style="color:grey">(미 입력시 주문 취소 될 수 있습니다)</small></p>
+
+    이름 : <input type="text" name="myName" placeholder="성함"> 
+    휴대폰 : <input type="number" 
+    name="phoneNumber" 
+    placeholder="전화번호"> 
+    
+    
+    <input type="submit" value="신청" 
+    onclick="javascript:alert('신청되었습니다.')">
+</form>
+</body>
+
+</html>
