@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 주어진 배열
+        var arr = ["자", "축", "인", "묘", "진", "사", "오", "미", "신", "유", "술", "해"];
+        
+        // 경로를 찾는 함수
+        function printPath(startPoint, endPoint) {
+            var startIndex = arr.indexOf(startPoint);
+            var endIndex = arr.indexOf(endPoint);
+            var step = 5; // 이동할 칸 수
+    
+            if (startIndex === -1 || endIndex === -1) {
+                console.log("시작 또는 끝 지점이 없습니다.");
+                return;
+            }
+    
+            // 경로 출력 (정방향)
+            console.log(`출발 지점: ${arr[startIndex]}`);
+            console.log(`도착 지점: ${arr[endIndex]}`);
+            console.log("최단 경로:");
+    
+            for (var i = startIndex; i <= endIndex; i += step) {
+                console.log(arr[i]);
+                // 마지막 위치에서 "해"로 가는 경우
+                if (i + step > endIndex) {
+                    console.log(arr[endIndex]); // 해를 추가로 출력
+                }
+            }
+    
+            // 경로 출력 (역방향)
+            console.log(`\n도착 지점: ${arr[endIndex]}`);
+            console.log(`출발 지점: ${arr[startIndex]}`);
+            console.log("최단 경로 (역방향):");
+    
+            // 역방향 이동
+            for (var j = endIndex; j >= startIndex; j -= step) {
+                console.log(arr[j]);
+                // 마지막 위치에서 "자"로 가는 경우
+                if (j - step < startIndex) {
+                    console.log(arr[startIndex]); // 자를 추가로 출력
+                }
+            }
+        }
+    
+        // 함수 호출
+        printPath("자", "해");
+    </script>
+    
+
+
+</body>
+
+</html>
