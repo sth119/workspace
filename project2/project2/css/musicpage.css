@@ -1,0 +1,181 @@
+div.container {
+    width: 50%;
+    margin: auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#shuffle {
+    float: left;
+}
+
+#repeat {
+    float: right;
+}
+
+body.musicpage {
+    margin: auto;
+    background-color: beige;
+}
+body.musicpage section article.profile img {
+    box-shadow: 5px 15px 20px rgba(173, 216, 230, .8);
+}
+body.musicpage section a.btnView {
+    background: linear-gradient(45deg, #3dd6d6, #27ddf5);
+    box-shadow: 5px 10px 20px rgba(0, 255, 255, .493);
+}
+
+body.musicpage nav.menu a:nth-of-type(1) {
+    float: left;
+    display: flex;                  
+    align-items: center;            
+    justify-content: center;        
+    width: 10%;                    
+    height: 65vh; 
+    flex-wrap: wrap;
+    text-decoration: none; 
+    
+}
+body.musicpage nav.menu a:nth-of-type(2) {
+    float: right;
+    display: flex;                  /* flex로 변경 */
+    align-items: center;            /* 아이콘을 수직 가운데 정렬 */
+    justify-content: center;        /* 수평 가운데 정렬 */
+    width: 10%;                    /* 아이콘 크기 설정 */
+    height: 65vh; 
+    flex-wrap: wrap;
+    text-decoration: none;  
+} 
+
+section #playBtn {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+    margin: 0px auto 20px;
+    border-radius: 16px;
+    border: none;
+
+    color: white;
+    background-color: skyblue;
+    
+    
+    font-size: 15px;
+    line-height: 32px;
+    text-align: center;
+
+    section ul.contact {
+        margin-bottom: 25px;
+    }
+    section ul.contact li {
+        width: 100%;
+        padding: 10px 0px;
+        border-bottom: 1px solid #eee;
+    }
+    section ul.contact li:last-child {
+        border-bottom: none;
+    }
+    section ul.contact li i {
+        width: 20%;
+        text-align: center;
+    
+        color: #555;
+        font-size: 15px;
+    
+        text-shadow: 2px 2px 2px #ddd;
+    }
+    section ul.contact li span {
+        font-weight: normal;
+        font-size: 15px;
+    
+        color: #555;
+        letter-spacing: 1px;
+    }
+}
+
+
+section {
+    width: 340px;
+
+    /* 앞으로 넣을 컨텐츠에 따라 높이가 조정되도록 높이는 지정안함 */
+
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    background: #fff;
+
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
+}
+section nav.menu {
+    width: 100%;
+}
+
+section nav.menu::after {
+    content: '';
+
+    /* 아래 두개의 속성으로, <nav>태그가 `자식요소의 높이값`을 인식할 수 있도록 해줌. */
+    /*  1. 강제로 display 속성값을 block으로 해야만 인식가능함. */
+    /*  2. 더불어 float 속성을 clear 시킴으로써 자동인식하게 해줌. */
+    display: block;             /* 가상요소(::after)이기 때문에, inline임. 이를 block으로 강제변환 (***) */
+    clear: both;                /* (***) */
+}
+
+section article.profile {
+    width: 100%;
+    margin-top: 20px;
+
+    /* 모든 inline 자식요소는, 아래의 속성을 통해 중앙정렬 가능함 (***) */
+    text-align: center;
+}
+section article.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+    /* box-shadow: 5px 15px 30px rgba(173, 216, 230, .8); */
+}
+section article.profile h1 {
+    margin-bottom: 30px;
+
+    /* font-weight: normal; */
+    font-size: 18px;
+
+    color: #ccc;
+}
+section article.profile h2 {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+section a.btnView {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+    margin: 0px auto 20px;
+    border-radius: 16px;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 32px;
+    text-align: center;
+
+    /* box-shadow: 5px 10px 20px rgba(0, 255, 255, .493);
+    background: linear-gradient(45deg, #3dd6d6, #27ddf5); */
+}
+
+body nav.menu a {
+
+    color: #6d6060;
+    font-size: 50px;
+
+}
+
+
+  
